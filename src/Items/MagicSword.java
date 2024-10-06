@@ -13,4 +13,6 @@ public class MagicSword extends Weapon implements Usable {
     public void everyFifthSwingShootFireball() {
 
     }
+
+    public void use(){}
 }

@@ -1,17 +1,15 @@
 import Items.HealthPotion;
-import abstractItems.Item;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        boolean running = true;
-        Scanner input = new Scanner(System.in);
+        //boolean running = true;
+        //Scanner input = new Scanner(System.in);
         Inventory inventory = new Inventory();
-        ArrayList<Item> items = new ArrayList<>();
 
-        while(running){
+        /*while(running){
             System.out.println("1. Add an item");
             System.out.println("2. Remove an item");
             System.out.println("3. Print all items");
@@ -36,6 +34,14 @@ public class Main {
                     running = false;
                     break;
             }
-        }
+        }*/
+
+        HealthPotion healthPotion = new HealthPotion("Basic Healing Potion", 1, 10, "Instant healing", 1, 20);
+        inventory.addItem(healthPotion);
+        healthPotion.use();
+        inventory.displayItems();
+
+        inventory.deleteItem(healthPotion);
+        inventory.displayItems();
     }
 }
