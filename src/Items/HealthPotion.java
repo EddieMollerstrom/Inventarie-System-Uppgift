@@ -20,13 +20,6 @@ public class HealthPotion extends Consumable implements Usable {
         restoreHealth();
     }
 
-    /*@Override
-    public String toString() {
-        return "Name: " + getName() + " | Weight: " + getWeight() + " | Gold Value: " + getGoldValue() + " | Effect: " + getEffect() + " | Duration: " + getDuration() + " | Health Provided: " + healthProvided;
-    }
-
-     */
-
     @Override
     public String toString() {
         return "\nName: " + getName() + "\nWeight: " + getWeight() + "\nGold Value: " + getGoldValue() + "\nEffect: " + getEffect() + "\nDuration: " + getDuration() + "\nHealth Provided: " + healthProvided;

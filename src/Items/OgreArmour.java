@@ -10,4 +10,14 @@ public class OgreArmour extends Armour implements Equippable {
     public OgreArmour(int stamina, int strength) {
         super();
     }
+
+    @Override
+    public void equip() {
+
+    }
+
+    @Override
+    public void unequip() {
+
+    }
 }

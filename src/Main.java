@@ -43,5 +43,6 @@ public class Main {
 
         inventory.deleteItem(healthPotion);
         inventory.displayItems();
+        System.out.println(inventory.vendorItem(healthPotion));
     }
 }
