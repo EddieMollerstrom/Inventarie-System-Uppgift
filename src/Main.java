@@ -1,4 +1,6 @@
 import Items.HealthPotion;
+import Items.MagicSword;
+import Items.OgreArmour;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,6 +10,7 @@ public class Main {
         //boolean running = true;
         //Scanner input = new Scanner(System.in);
         Inventory inventory = new Inventory();
+        Player p1 = new Player("Eddie", 100, inventory);
 
         /*while(running){
             System.out.println("1. Add an item");
@@ -39,10 +42,18 @@ public class Main {
         HealthPotion healthPotion = new HealthPotion("Basic Healing Potion", 1, 10, "Instant healing", 1, 20);
         inventory.addItem(healthPotion);
         healthPotion.use();
+        OgreArmour ogreArmour = new OgreArmour("OG", 10, 50, 100, "Leather", 10, 20);
+        inventory.addItem(ogreArmour);
         inventory.displayItems();
+        ogreArmour.equip();
+
+        MagicSword magicSword = new MagicSword("MagicSword", 20, 200, 10, 100, 100);
+        magicSword.use();
+        magicSword.attack();
+        magicSword.everyFifthSwingShootFireball();
 
         inventory.deleteItem(healthPotion);
         inventory.displayItems();
-        System.out.println(inventory.vendorItem(healthPotion));
+        System.out.println("Gold value: " + inventory.vendorItem(healthPotion));
     }
 }
