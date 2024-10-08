@@ -3,7 +3,7 @@ package Items;
 import Interfaces.Usable;
 import abstractItems.Consumable;
 
-public class HealthPotion extends Consumable implements Usable {
+public class HealthPotion extends Consumable {
     private int healthProvided;
 
     public HealthPotion(String name, int weight, int goldValue,  String effect, int duration, int healthProvided) {

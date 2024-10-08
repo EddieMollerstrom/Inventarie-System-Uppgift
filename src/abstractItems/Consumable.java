@@ -1,6 +1,8 @@
 package abstractItems;
 
-public abstract class Consumable extends Item {
+import Interfaces.Usable;
+
+public abstract class Consumable extends Item implements Usable {
     private String effect;
     private int duration;
 

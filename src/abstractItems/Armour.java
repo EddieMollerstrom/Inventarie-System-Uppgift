@@ -36,5 +36,12 @@ public abstract class Armour extends Item {
         this.armourType = armourType;
     }
 
-    public void enchant(Item item){};
+    public void enchant(Item item){
+        int removeWeight = 10;
+        System.out.println("Enchanting item " + item.getName() + " with lighter weight, old weight: " + item.getWeight());
+        int newWeight = item.getWeight() - removeWeight;
+        item.setWeight(newWeight);
+        System.out.println("New weight " + item.getWeight());
+
+    };
 }
