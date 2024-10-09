@@ -1,7 +1,7 @@
 public class Player {
     private String name;
     private int gold;
-    private Inventory inventory;
+    private Inventory inventory;git
 
     public Player(String name, int gold, Inventory inventory) {
         this.name = name;
