@@ -19,6 +19,9 @@ public class Inventory {
         for (Item item : this.items) {
             System.out.println(item.toString());
         }
+        if(this.items.isEmpty()){
+            System.out.println("There are no items in the inventory.");
+        }
     }
 
     public ArrayList<Item> getItems() {

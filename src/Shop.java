@@ -27,7 +27,7 @@ public class Shop {
         Item itemToSell = null;
 
         for (Item item : itemsToSell) {
-            System.out.println(n + ": " + item.getName() + item.getGoldValue() + " Gold");
+            System.out.println(n + ": " + item.getName() + " " + item.getGoldValue() + " Gold");
             n++;
             itemGoldValue = item.getGoldValue();
             itemToSell = item;
@@ -37,7 +37,6 @@ public class Shop {
         String choice = input.nextLine();
         switch (choice) {
             case "1":
-                System.out.println(itemToSell.getName());
                 if (player.getGold() >= itemGoldValue) {
                     player.getInventory().addItem(itemToSell);
                     deleteItem(itemToSell);

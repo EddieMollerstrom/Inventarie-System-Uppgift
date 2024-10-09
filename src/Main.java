@@ -23,7 +23,8 @@ public class Main {
             System.out.println("2. Remove an item");
             System.out.println("3. Print all items");
             System.out.println("4. Show item powers");
-            System.out.println("5. Exit");
+            System.out.println("5. Buy from the shop");
+            System.out.println("6. Exit");
             String choice = input.nextLine();
 
             switch(choice){
@@ -83,18 +84,13 @@ public class Main {
                     magicSword.use();
                     break;
                 case "5":
+                    shop.addItem(new HealthPotion("HealthPotion", 1, 10, "Instant healing", 1, 20));
+                    shop.sellItem();
+                    break;
+                case "6":
                     running = false;
                     break;
             }
         }
-
-        shop.addItem(new HealthPotion("HealthPotion", 1, 10, "Instant healing", 1, 20));
-
-
-        p1.getInventory().displayItems();
-        shop.sellItem();
-        System.out.println("Players items:");
-        p1.getInventory().displayItems();
-
     }
 }
