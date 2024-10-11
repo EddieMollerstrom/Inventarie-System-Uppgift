@@ -13,8 +13,6 @@ public abstract class Item {
 
     public Item(){}
 
-    public void viewDetails(){}
-
     public String getName() {
         return name;
     }
